@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Repo.styles.css" asp-append-version="true" />
     <style>
-        body {
+/*        body {
             background-image: url('/image/dew.jpg');
             background-attachment: fixed;
             background-size: cover;
         }
         nav{
             background-color:blueviolet;
-        }
+        }*/
        
     </style>
 </head>
@@ -64,11 +64,15 @@
             @RenderBody()
         </main>
     </div>
+    
 
     <footer class="border-top footer text-muted" style="position:absolute;bottom:10px">
-        <div class="container">
+        @*<div class="container">
             &copy; 2023 - Repo - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+        </div>*@
+        <marquee direction="right" behavior="alternate" style="font-size:larger;font-family:Times New Roman">
+            It’s okay if you don’t like this. Not everyone has good taste.
+        </marquee>
     </footer>
     <script src="~/js/custom.js"></script>
 

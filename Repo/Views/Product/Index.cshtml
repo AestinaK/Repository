@@ -1,12 +1,11 @@
 ﻿@model IEnumerable<Repo.Core.Product>
 
 @{
-    ViewData["Tite"] = "Products List";
+    ViewData["Title"] = "Products List";
 }
 <h3>@ViewData["Title"]</h3>
-<a class="btn btn-outline-primary" type="submit" asp-controller="Product" asp-action="CreateOrEdit"> Add</a>
-<a class="btn btn-outline-warning" type="submit" asp-controller="Home" asp-action="Index"> Go Back</a>
-<table class="table table-responsive table-borderd table-hovered">
+
+<table class="table table-responsive table-borderd table-hovered table-dark">
     <thead>
         <tr class="table-active">
             <th> @Html.DisplayNameFor(model=>model.Id)</th>
@@ -55,3 +54,16 @@
         }
     </tbody>
 </table>
+<a class="btn btn-primary" type="submit" asp-controller="Product" asp-action="CreateOrEdit"> Add</a>
+<a class="btn btn-primary" type="submit" onclick="function()" asp-controller="Home" asp-action="Index"> Go Back</a>
+<script>
+    function function(){
+        var txt;
+        if(confirm("Do you wanna go back?"))
+        {
+         txt="";   
+        }else{
+            txt="";
+        }
+    }
+</script>

@@ -7,12 +7,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//Registering ApplicationDbContext here
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
     option.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 });
-
+//Register your Repository here like this 
 builder.Services.AddScoped<IProductRepository,ProductRepository>();
 
 var app = builder.Build();
